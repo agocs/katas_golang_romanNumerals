@@ -46,4 +46,10 @@ func Test1738isSomethingLong(t *testing.T){
 	}
 
 }
+func Test944isCMXLIV(t *testing.T){
+	if toRoman(944) != "CMXLIV"{
+		t.Errorf("toRoman(944) did not return CMXLIV")
+	}
+
+}
 
