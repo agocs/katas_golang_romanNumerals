@@ -53,3 +53,47 @@ func Test944isCMXLIV(t *testing.T){
 
 }
 
+
+
+
+
+
+func testIis1(t *testing.T){
+	if i := toArabic("I"); i != 1{
+		t.Errorf("toArabic(I) returned %d, not 1")
+	}
+}
+
+
+
+func testIIis2(t *testing.T){
+	if i := toArabic("II"); i != 2{
+		t.Errorf("toArabic(I) returned %d, not 2")
+	}
+}
+
+
+func testIVis4(t *testing.T){
+	if i := toArabic("IV"); i != 4{
+		t.Errorf("toArabic(I) returned %d, not 4")
+	}
+}
+
+func testVis5(t *testing.T){
+	if i := toArabic("V"); i != 5{
+		t.Errorf("toArabic(I) returned %d, not 5")
+	}
+}
+
+
+func testXis10(t *testing.T){
+	if i := toArabic("X"); i != 10{
+		t.Errorf("toArabic(I) returned %d, not 5")
+	}
+}
+
+func testXCIXis99(t *testing.T){
+	if i := toArabic("XCIX"); i != 99{
+		t.Errorf("toArabic(I) returned %d, not 99")
+	}
+}
