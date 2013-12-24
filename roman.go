@@ -52,13 +52,15 @@ func toArabic(r string) int {
 	evalBuffer := ""
 	accumulator := 0
 	for i, c := range r {
-		if len(evalBuffer) > 0 && translation[string(c)] > translation[string(r[len(evalBuffer)-1:])] {
-			accumulator += eval(evalBuffer)
+		if len(evalBuffer) > 0 && translation[string(c)] > translation[evalBuffer[len(evalBuffer)-1:]] {
+			accumulator = accumulator + translation[string(c)] - eval(evalBuffer)
 			evalMin = i
 		}
-		evalBuffer = r[evalMin:i]
+		//accumulator = accumulator + translation[string(c)]
+		evalBuffer = r[evalMin:i+1]
 	}
-	return -1
+	accumulator += eval(evalBuffer)
+	return accumulator
 }
 
 func eval(buf string) int {

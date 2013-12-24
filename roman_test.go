@@ -58,49 +58,54 @@ func Test944isCMXLIV(t *testing.T){
 
 
 
-func testIis1(t *testing.T){
+func TestIis1(t *testing.T){
 	if i := toArabic("I"); i != 1{
-		t.Errorf("toArabic(I) returned %d, not 1")
+		t.Errorf("toArabic(I) returned %d, not 1", i)
 	}
 }
 
 
-
-func testIIis2(t *testing.T){
+func TestIIis2(t *testing.T){
 	if i := toArabic("II"); i != 2{
-		t.Errorf("toArabic(I) returned %d, not 2")
+		t.Errorf("toArabic(II) returned %d, not 2", i)
 	}
 }
 
 
-func testIVis4(t *testing.T){
+func TestIVis4(t *testing.T){
 	if i := toArabic("IV"); i != 4{
-		t.Errorf("toArabic(I) returned %d, not 4")
+		t.Errorf("toArabic(IV) returned %d, not 4", i)
 	}
 }
 
-func testVis5(t *testing.T){
+func TestVis5(t *testing.T){
 	if i := toArabic("V"); i != 5{
-		t.Errorf("toArabic(I) returned %d, not 5")
+		t.Errorf("toArabic(V) returned %d, not 5", i)
+	}
+}
+
+func TestVIis6(t*testing.T){
+	if i := toArabic("VI"); i != 6{
+		t.Errorf("toArabic(VI) returned %d, not 6", i)
 	}
 }
 
 
-func testXis10(t *testing.T){
+func TestXis10(t *testing.T){
 	if i := toArabic("X"); i != 10{
-		t.Errorf("toArabic(I) returned %d, not 5")
+		t.Errorf("toArabic(X) returned %d, not 10", i)
 	}
 }
 
-func testXCIXis99(t *testing.T){
+func TestXCIXis99(t *testing.T){
 	if i := toArabic("XCIX"); i != 99{
-		t.Errorf("toArabic(I) returned %d, not 99")
+		t.Errorf("toArabic(XCIX) returned %d, not 99", i)
 	}
 }
 
 
-func testCXVIIIis143(t *testing.T){
+func TestCXVIIIis143(t *testing.T){
 	if i := toArabic("CXVIII"); i != 143{
-		t.Errorf("toArabic(I) returned %d, not 143")
+		t.Errorf("toArabic(CXVIII) returned %d, not 143", i)
 	}
 }
