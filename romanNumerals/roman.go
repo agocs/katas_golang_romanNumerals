@@ -71,8 +71,3 @@ func eval(buf string) int {
 	}
 	return accumulator
 }
-
-
-func ToArabic(r string) int {
-	return toArabic(r)
-}
