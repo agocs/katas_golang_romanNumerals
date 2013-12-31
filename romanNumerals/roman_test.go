@@ -59,53 +59,53 @@ func Test944isCMXLIV(t *testing.T){
 
 
 func TestIis1(t *testing.T){
-	if i := toArabic("I"); i != 1{
-		t.Errorf("toArabic(I) returned %d, not 1", i)
+	if i := ToArabic("I"); i != 1{
+		t.Errorf("ToArabic(I) returned %d, not 1", i)
 	}
 }
 
 
 func TestIIis2(t *testing.T){
-	if i := toArabic("II"); i != 2{
-		t.Errorf("toArabic(II) returned %d, not 2", i)
+	if i := ToArabic("II"); i != 2{
+		t.Errorf("ToArabic(II) returned %d, not 2", i)
 	}
 }
 
 
 func TestIVis4(t *testing.T){
-	if i := toArabic("IV"); i != 4{
-		t.Errorf("toArabic(IV) returned %d, not 4", i)
+	if i := ToArabic("IV"); i != 4{
+		t.Errorf("ToArabic(IV) returned %d, not 4", i)
 	}
 }
 
 func TestVis5(t *testing.T){
-	if i := toArabic("V"); i != 5{
-		t.Errorf("toArabic(V) returned %d, not 5", i)
+	if i := ToArabic("V"); i != 5{
+		t.Errorf("ToArabic(V) returned %d, not 5", i)
 	}
 }
 
 func TestVIis6(t*testing.T){
-	if i := toArabic("VI"); i != 6{
-		t.Errorf("toArabic(VI) returned %d, not 6", i)
+	if i := ToArabic("VI"); i != 6{
+		t.Errorf("ToArabic(VI) returned %d, not 6", i)
 	}
 }
 
 
 func TestXis10(t *testing.T){
-	if i := toArabic("X"); i != 10{
-		t.Errorf("toArabic(X) returned %d, not 10", i)
+	if i := ToArabic("X"); i != 10{
+		t.Errorf("ToArabic(X) returned %d, not 10", i)
 	}
 }
 
 func TestXCIXis99(t *testing.T){
-	if i := toArabic("XCIX"); i != 99{
-		t.Errorf("toArabic(XCIX) returned %d, not 99", i)
+	if i := ToArabic("XCIX"); i != 99{
+		t.Errorf("ToArabic(XCIX) returned %d, not 99", i)
 	}
 }
 
 
 func TestCXVIIIis143(t *testing.T){
-	if i := toArabic("CXVIII"); i != 143{
-		t.Errorf("toArabic(CXVIII) returned %d, not 143", i)
+	if i := ToArabic("CXVIII"); i != 143{
+		t.Errorf("ToArabic(CXVIII) returned %d, not 143", i)
 	}
 }

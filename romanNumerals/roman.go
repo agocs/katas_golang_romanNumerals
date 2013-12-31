@@ -1,5 +1,7 @@
 package romanNumerals
 
+import "fmt"
+
 
 func initTranslation() map[string]int {
 	var translation = make(map[string]int)
@@ -46,18 +48,40 @@ func toRoman(x int) string {
 	return ""
 }
 
-func toArabic(r string) int { 
+func toArabic(r string, debug bool) int { 
 	translation := initTranslation()
 	evalMin := 0
 	evalBuffer := ""
 	accumulator := 0
 	for i, c := range r {
+
+		if debug {
+			fmt.Println("DEBUGGING: %s", r)
+			fmt.Println("==================")
+			fmt.Println("c is %s", string(c))
+			fmt.Println("evalBuffer is %s", evalBuffer)
+		}
+
 		if len(evalBuffer) > 0 && translation[string(c)] > translation[evalBuffer[len(evalBuffer)-1:]] {
 			accumulator = accumulator + translation[string(c)] - eval(evalBuffer)
-			evalMin = i
+			evalMin = i+1
+			
+			if debug {
+				fmt.Println("c is greater than the last char in evalBuffer.")
+				fmt.Println("eval(evalBuffer) was ", eval(evalBuffer))
+				fmt.Println("accumulator is now ", accumulator)
+			}
+
+
+
 		}
 		//accumulator = accumulator + translation[string(c)]
 		evalBuffer = r[evalMin:i+1]
+
+		if(debug){
+			fmt.Println("evalBuffer now contains ", evalBuffer)
+		}
+
 	}
 	accumulator += eval(evalBuffer)
 	return accumulator
@@ -70,4 +94,13 @@ func eval(buf string) int {
 		accumulator += translation[string(c)]
 	}
 	return accumulator
+}
+
+
+func ToArabic(r string) int {
+	return toArabic(r, false)
+}
+
+func ToArabicDebug(r string, debug bool) int {
+	return toArabic(r, debug)
 }
