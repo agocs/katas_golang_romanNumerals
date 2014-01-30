@@ -104,8 +104,8 @@ func TestXCIXis99(t *testing.T){
 }
 
 
-func TestCXVIIIis143(t *testing.T){
-	if i := ToArabic("CXVIII"); i != 143{
-		t.Errorf("ToArabic(CXVIII) returned %d, not 143", i)
+func TestCXVIIIis118(t *testing.T){
+	if i := ToArabic("CXVIII"); i != 118{
+		t.Errorf("ToArabic(CXVIII) returned %d, not 118", i)
 	}
 }
